@@ -1,0 +1,37 @@
+@import '../css/variables.css';
+
+.container{
+    background-color: var(--grey-background);
+    min-height: 80vh;
+    width: 
+    100%;
+}
+
+.genre{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.genre__box{
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+}
+
+.genre__button{
+    background-color: transparent;
+    border: solid yellow 1px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 800;
+    height: 1.4rem;
+    width: 6rem;
+    transition-timing-function: ease-in-out;
+    transition-duration: .2s;
+}
+
+.genre__button:hover{
+    cursor: pointer;
+    transform: translatey(5px);
+}

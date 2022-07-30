@@ -1,0 +1,50 @@
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie__box{
+    cursor: pointer;
+    justify-content: center;
+    margin: 2rem;
+    height: 25rem;
+    width: 20%;
+}
+
+.movies__img{
+    border-radius: 10px;
+    height: 87%;
+    width: 100%;
+}
+
+.movie__details{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.details__name{
+    color: white;
+    font-family: var(--basic-font);
+    margin-left: 2%;
+    width: 86%;
+
+}
+.details__year{
+    color: yellow;
+    font-family: var(--basic-font);
+    width: 10%;
+    margin-right: 2%;
+}
+
+.details__thumbs{
+    color: yellow;
+    width: 2rem;
+}
+.details__likes{
+    color: yellow;
+    font-family: var(--basic-font);
+    margin-right: 2%;
+    text-align: end;
+    width: 48%;
+}
