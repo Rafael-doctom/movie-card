@@ -2,15 +2,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-;
+}
+
+.movie__container{
+    display: flex;
+    margin: 10px;
+    width: 20%;
 }
 
 .movie__box{
     cursor: pointer;
     justify-content: center;
-    margin: 2rem;
-    height: 25rem;
-    width: 20%;
+    width: 100%;
 }
 
 .movies__img{
@@ -27,25 +30,17 @@
 .details__name{
     color: white;
     font-family: var(--basic-font);
-    margin-left: 2%;
-    width: 86%;
+    width: 100%;
 
 }
 .details__year{
     color: yellow;
     font-family: var(--basic-font);
-    width: 10%;
-    margin-right: 2%;
+    width: 100%;
 }
 
-.details__thumbs{
-    color: yellow;
-    width: 2rem;
-}
 .details__likes{
     color: yellow;
     font-family: var(--basic-font);
-    margin-right: 2%;
-    text-align: end;
-    width: 48%;
+    width: 100%;
 }
