@@ -1,0 +1,43 @@
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.movie__box{
+    justify-content: center;
+    margin: 2rem;
+    height: 25rem;
+    width: 25%;
+}
+
+.movies__img{
+    height: 87%;
+    width: 100%;
+}
+
+.movie__details{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.details__name{
+    margin-left: 2%;
+    width: 86%;
+
+}
+.details__year{
+    width: 10%;
+    margin-right: 2%;
+}
+
+.details__duration{
+    margin-left: 2%;
+    width: 48%;
+
+}
+.details__likes{
+    margin-right: 2%;
+    text-align: end;
+    width: 48%;
+}
