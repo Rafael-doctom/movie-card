@@ -1,77 +1,109 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Movie</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../css/reset.css">
-        <link rel="stylesheet" href="../css/genre-section.css">
-        <link rel="stylesheet" href="../css/variables.css">
-        <link rel="stylesheet" href="../css/movie-component.css">
-    </head>
-    <body>
-        <main class="container">
-            <section class="genre">
-                <div class="genre__box">
-                    <button class="genre__button">Drama</button>
-                    <button class="genre__button">Romance</button>
-                    <button class="genre__button">Comédia</button>
-                </div>
-            </section>
-            <h3>Mais populares</h3>
-            <section class="movies">
-              <div class="movie__box" data-id>
-                <img src="" alt="" class="movies__img" data-img="1">
-                <div class="movie__details">
-                    <p class="details__name" data-name="1"></p>
-                    <p class="details__year" data-year="1"></p>
-                    <p class="details__likes" data-likes="1"></p>
-                </div>
-              </div>
-              <div class="movie__box" data-id>
-                <img src="" alt="" class="movies__img" data-img="2">
-                <div class="movie__details">
-                    <p class="details__name" data-name="2"></p>
-                    <p class="details__year" data-year="2"></p>
-                    <p class="details__likes" data-likes="2"></p>
-                </div>
-              </div>
-              <div class="movie__box" data-id>
-                <img src="" alt="" class="movies__img" data-img="3">
-                <div class="movie__details">
-                    <p class="details__name" data-name="3"></p>
-                    <p class="details__year" data-year="3"></p>
-                    <p class="details__likes" data-likes="3"></p>
-                </div>
-              </div>
-              <div class="movie__box" data-id>
-                <img src="" alt="" class="movies__img" data-img="4">
-                <div class="movie__details">
-                    <p class="details__name" data-name="4"></p>
-                    <p class="details__year" data-year="4"></p>
-                    <p class="details__likes" data-likes="4"></p>
-                </div>
-              </div>
-              <div class="movie__box" data-id>
-                <img src="" alt="" class="movies__img" data-img="5">
-                <div class="movie__details">
-                    <p class="details__name" data-name="5"></p>
-                    <p class="details__year" data-year="5"></p>
-                    <p class="details__likes" data-likes="5"></p>
-                </div>
-              </div>
-              <div class="movie__box" data-id>
-                <img src="" alt="" class="movies__img" data-img="6">
-                <div class="movie__details">
-                    <p class="details__name" data-name="6"></p>
-                    <p class="details__year" data-year="6"></p>
-                    <p class="details__likes" data-likes="6"></p>
-                </div>
-              </div>
-            </section>
-        </main>
-        <script src="../js/index.js" type="module"></script>
-    </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Movie</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/genre-section.css">
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/movie-component.css">
+</head>
+
+<body>
+
+
+  <div class="hero-image" id="hero-image">
+    <div class="hero-text">
+      <h1 class="title">MovieCard</h1>
+      <p class="paragraph" id="paragraph"> Unlimited Movie, TVs Shows, & More.</p>
+      <div class="details">
+        <span id="genres">
+          HD Romance,
+        </span>
+        <span>
+          <img src="assets/icons/date-svgrepo-com 1.svg" alt="">
+          <span id="release_date">
+            Drama 2022
+          </span>
+        </span>
+        <span>
+          <img src="assets/icons/clock-svgrepo-com 1.svg" alt="">
+          <span id="time">
+            128 min
+          </span>
+        </span>
+      </div>
+      <button>
+        WATCH NOW
+      </button>
+    </div>
+  </div>
+
+  <main class="container">
+    <section class="genre">
+      <div class="genre__box">
+        <button class="genre__button">Drama</button>
+        <button class="genre__button">Romance</button>
+        <button class="genre__button">Comédia</button>
+      </div>
+    </section>
+    <h3>Mais populares</h3>
+    <section class="movies">
+      <div class="movie__box" data-id>
+        <img src="" alt="" class="movies__img" data-img="1">
+        <div class="movie__details">
+          <p class="details__name" data-name="1"></p>
+          <p class="details__year" data-year="1"></p>
+          <p class="details__likes" data-likes="1"></p>
+        </div>
+      </div>
+      <div class="movie__box" data-id>
+        <img src="" alt="" class="movies__img" data-img="2">
+        <div class="movie__details">
+          <p class="details__name" data-name="2"></p>
+          <p class="details__year" data-year="2"></p>
+          <p class="details__likes" data-likes="2"></p>
+        </div>
+      </div>
+      <div class="movie__box" data-id>
+        <img src="" alt="" class="movies__img" data-img="3">
+        <div class="movie__details">
+          <p class="details__name" data-name="3"></p>
+          <p class="details__year" data-year="3"></p>
+          <p class="details__likes" data-likes="3"></p>
+        </div>
+      </div>
+      <div class="movie__box" data-id>
+        <img src="" alt="" class="movies__img" data-img="4">
+        <div class="movie__details">
+          <p class="details__name" data-name="4"></p>
+          <p class="details__year" data-year="4"></p>
+          <p class="details__likes" data-likes="4"></p>
+        </div>
+      </div>
+      <div class="movie__box" data-id>
+        <img src="" alt="" class="movies__img" data-img="5">
+        <div class="movie__details">
+          <p class="details__name" data-name="5"></p>
+          <p class="details__year" data-year="5"></p>
+          <p class="details__likes" data-likes="5"></p>
+        </div>
+      </div>
+      <div class="movie__box" data-id>
+        <img src="" alt="" class="movies__img" data-img="6">
+        <div class="movie__details">
+          <p class="details__name" data-name="6"></p>
+          <p class="details__year" data-year="6"></p>
+          <p class="details__likes" data-likes="6"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="../js/index.js" type="module"></script>
+</body>
+
 </html>
