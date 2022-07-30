@@ -1,3 +1,9 @@
+
+
+
+
+
+// guilherme dará continuidade aqui
 import {getFolder} from "./functions.js"
 
 function request (){
@@ -25,4 +31,5 @@ function request (){
         elements.movieName.dataset.id = apiResponse.results[a].id
     }
 }) ()
+
 
