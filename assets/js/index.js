@@ -1,5 +1,4 @@
-
-
+import { removeAllChildNodes } from "./functions.js"
 
 
 
@@ -25,8 +24,8 @@ const component = (id, src, year, name, likes) =>{
 }
 
 //Here we make a request to tmdb api
-function request (){
-    return fetch('https://api.themoviedb.org/3/discover/movie?api_key=103186a9f4ef77e1f666cdd93a1fa70a&page=1&sort_by=popularity.desc', {
+function request (page = 1){
+    return fetch(`https://api.themoviedb.org/3/discover/movie?api_key=103186a9f4ef77e1f666cdd93a1fa70a&page=${page}&sort_by=popularity.desc`, {
         method: 'GET',
         headers:{
             'Content-Type': 'application/json;charset=utf-8'
@@ -58,10 +57,13 @@ const pageButtons = document.querySelector('[data-page]')
 console.log(pageButtons)
 
 pageButtons.addEventListener('click', event => {
-    /*let botao = event.target.dataset === "[data-page='1']"
-    if(botao) console.log('de certo')*/
+    let botao = event.target.dataset === "[data-page='1']"
+    if(botao) console.log('de certo')
     let button = parseInt(event.target.innerHTML)
     if(button > 0) {
+        const newApiRequest = await request(button)
+        const newApiResponse = await newApiRequest.json()
+        console.log(newApiResponse)
 
     }
 })
