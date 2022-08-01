@@ -26,7 +26,7 @@ const component = (id, src, year, name, likes) =>{
 
 //Here we make a request to tmdb api
 function request (){
-    return fetch('https://api.themoviedb.org/3/discover/movie?api_key=103186a9f4ef77e1f666cdd93a1fa70a&?page=1&sort_by=popularity.desc', {
+    return fetch('https://api.themoviedb.org/3/discover/movie?api_key=103186a9f4ef77e1f666cdd93a1fa70a&page=1&sort_by=popularity.desc', {
         method: 'GET',
         headers:{
             'Content-Type': 'application/json;charset=utf-8'
@@ -42,7 +42,7 @@ function request (){
     //This const get the section where we append each movie folder
     const movieBanner = document.querySelector('[data-movies]')
     //This looping add a new movie folder based on the api response. We'll have as many folders as loopings we do
-    for(let a = 1; a < 10; a++){
+    for(let a = 0; a < 20; a++){
         const element = component(
             apiResponse.results[a].id,
             `https://image.tmdb.org/t/p/w500${apiResponse.results[a].poster_path}`,
@@ -53,4 +53,16 @@ function request (){
         movieBanner.appendChild(element)
     }
 }) ()
+
+const pageButtons = document.querySelector('[data-page]')
+console.log(pageButtons)
+
+pageButtons.addEventListener('click', event => {
+    /*let botao = event.target.dataset === "[data-page='1']"
+    if(botao) console.log('de certo')*/
+    let button = parseInt(event.target.innerHTML)
+    if(button > 0) {
+
+    }
+})
 
