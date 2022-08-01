@@ -85,3 +85,81 @@
     background-color: #FFE600;
     color: black;
 }
+
+/*Código enviado por Fernando*/
+footer {
+    width: 100%;
+    background-color: #2e2d2d;    
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+footer .footer-cima {
+    display: flex;
+}
+
+.footer-cartoes  {
+    display: flex;
+    justify-content: end;
+}
+
+footer .footer-links {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    list-style: none;
+    margin-right: 60px;
+}
+
+footer .footer-logo  {
+    display: flex;
+    justify-content: start;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
+footer .footer-link a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 22px;
+    font-size: 14px;
+}
+
+footer .footer-link a:hover {
+    color: #FFE600;
+}
+
+.footer-links-baixo {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;  
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.footer-redes {
+    margin-left: 46px;
+}
+
+.footer-redes img {
+    margin-left: 15px;
+}
+
+.footer-links-baixo a {
+    text-decoration: none;
+    color: #fff;
+    padding-right: 6px;
+    font-size: 17px;
+}
+
+.footer-links-baixo a:hover {
+    color: #FFE600; 
+}
+
+.footer-copyright p{
+    color: #fff;
+    margin-left: 60px;
+    font-size: small;
+    padding-top: 25px;
+}
