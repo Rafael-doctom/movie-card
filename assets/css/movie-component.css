@@ -1,3 +1,10 @@
+.container__populars{
+    color: white;
+    font-family: var(--basic-font);
+    margin: 2rem 0 2rem 0;
+    text-align: center;
+}
+
 .movies{
     display: flex;
     flex-wrap: wrap;
@@ -49,9 +56,19 @@
 .pages__box{
     display: flex;
     justify-content: space-around;
-    margin: 0;
+    margin: 2rem 0 0 0;
     padding: 0 40% 0 40%;
     width: 20%;
+}
+
+.page__button{
+    cursor: pointer;
+    color: yellow;
+    font-family: var(--basic-font);
+}
+
+.page__button:hover{
+    opacity: 20%;
 }
 
 

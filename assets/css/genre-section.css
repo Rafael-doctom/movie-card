@@ -1,10 +1,13 @@
 @import '../css/variables.css';
 
+.body{
+    background-color: var(--grey-background);
+}
+
 .container{
     background-color: var(--grey-background);
-    min-height: 80vh;
-    width: 
-    100%;
+    margin-bottom: 2rem;
+    width: 100%;
     padding-top: 3rem;
 }
 
