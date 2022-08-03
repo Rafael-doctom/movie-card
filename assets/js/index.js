@@ -1,35 +1,54 @@
-
-
-
-
+import { removeAllChildNodes, request, mountMovieFolders, organizeMoveButtons } from "./functions.js"
 
 // guilherme dará continuidade aqui
-import {getFolder} from "./functions.js"
 
-function request (){
-    return fetch('https://api.themoviedb.org/3/discover/movie?api_key=103186a9f4ef77e1f666cdd93a1fa70a&?page=1&sort_by=popularity.desc', {
-        method: 'GET',
-        headers:{
-            'Content-Type': 'application/json;charset=utf-8'
-        }
-    })
-    
-}
-
+//Here we show the folders as soon as the index page is open
 (async()=>{
     const api = await request()
     const apiResponse = await api.json()
     console.log(apiResponse)
-    for(let a = 1; a < 7; a++){
-        const elements = getFolder(a)
-        const t = apiResponse.results[a].vote_average
-        elements.movieName.innerHTML = apiResponse.results[a].original_title
-        elements.movieYear.innerHTML = apiResponse.results[a].release_date.slice(0,4)
-        elements.movieLikes.innerHTML = apiResponse.results[a].vote_average
-        elements.movieName.innerHTML = apiResponse.results[a].original_title
-        elements.movieImg.src = `https://image.tmdb.org/t/p/w500${apiResponse.results[a].poster_path}`
-        elements.movieName.dataset.id = apiResponse.results[a].id
-    }
+    //This const get the section where we append each movie folder
+    const movieBanner = document.querySelector('[data-movies]')
+    //This looping add a new movie folder based on the api response. We'll have as many folders as loopings we do
+    mountMovieFolders(apiResponse, movieBanner)
 }) ()
 
+const pageButtons = document.querySelector('[data-page]')
+//this is an addEventListener aplied on the buttons used to move between the API pages
+pageButtons.addEventListener('click', event => {
+    let button = event.target
+    const movieBanner = document.querySelector('[data-movies]')
+    //this if works just when we click on a number
+    if(parseInt(button.innerHTML) > 0) {
+        (async()=>{
+            const newApiRequest = await request(parseInt(button.innerHTML))
+            const newApiResponse = await newApiRequest.json()
+            removeAllChildNodes(movieBanner)
+            mountMovieFolders(newApiResponse, movieBanner)
+        })()
+    } 
+    //this switch works when the button clicked is right ">>" or left "<<"
+    switch(button.dataset.button){
+        case 'right':
+            (async()=>{
+                const goButton = parseInt(document.querySelector('[data-button="4"]').innerHTML)
+                const newApiRequest = await request(goButton + 1)
+                const newApiResponse = await newApiRequest.json()
+                removeAllChildNodes(movieBanner)
+                mountMovieFolders(newApiResponse, movieBanner)
+                organizeMoveButtons(true, goButton)
+            })()
+            break
+        case 'left':
+            (async()=>{
+                const backButton = parseInt(document.querySelector('[data-button="1"]').innerHTML)
+                if(backButton == 1) return
+                const newApiRequest = await request(backButton - 4)
+                const newApiResponse = await newApiRequest.json()
+                removeAllChildNodes(movieBanner)
+                mountMovieFolders(newApiResponse, movieBanner)
+                organizeMoveButtons(false, backButton)
+            })() 
+    }
+})
 

@@ -1,16 +1,27 @@
+.container__populars{
+    color: white;
+    font-family: var(--basic-font);
+    margin: 2rem 0 2rem 0;
+    text-align: center;
+}
+
 .movies{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-;
+}
+
+.movie__container{
+    display: flex;
+    margin: 10px;
+    width: 20%;
+    height: 33rem;
 }
 
 .movie__box{
     cursor: pointer;
     justify-content: center;
-    margin: 2rem;
-    height: 25rem;
-    width: 20%;
+    width: 100%;
 }
 
 .movies__img{
@@ -27,25 +38,39 @@
 .details__name{
     color: white;
     font-family: var(--basic-font);
-    margin-left: 2%;
-    width: 86%;
+    width: 100%;
 
 }
 .details__year{
     color: yellow;
     font-family: var(--basic-font);
-    width: 10%;
-    margin-right: 2%;
+    width: 100%;
 }
 
-.details__thumbs{
-    color: yellow;
-    width: 2rem;
-}
 .details__likes{
     color: yellow;
     font-family: var(--basic-font);
-    margin-right: 2%;
-    text-align: end;
-    width: 48%;
+    width: 100%;
 }
+
+.pages__box{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0 0 0;
+    padding: 0 40% 0 40%;
+    width: 20%;
+}
+
+.page__button{
+    cursor: pointer;
+    color: yellow;
+    font-family: var(--basic-font);
+}
+
+.page__button:hover{
+    opacity: 20%;
+}
+
+
+
+
