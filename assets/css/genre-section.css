@@ -33,9 +33,12 @@
     width: 6rem;
     transition-timing-function: ease-in-out;
     transition-duration: .2s;
+    font-size: 1rem;
 }
 
 .genre__button:hover{
     cursor: pointer;
     transform: translatey(5px);
+    border: solid #ffe600c0 1px;
+
 }

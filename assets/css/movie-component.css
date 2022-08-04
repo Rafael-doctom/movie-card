@@ -1,76 +1,107 @@
-.container__populars{
+.container__populars {
     color: white;
     font-family: var(--basic-font);
-    margin: 2rem 0 2rem 0;
-    text-align: center;
+    text-align: left;
+    font-size: 2rem;
+    width: 75vw;
+    margin: 2rem auto;
 }
 
-.movies{
+.container__populars::before {
+    content: '|';
+    height: 10vh;
+    width: 2vw;
+    color: #FFE600;
+    font-size: 3rem;
+    padding-right: 0.35rem;
+    margin-left: -0.75rem;
+}
+
+.movies {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 90vw;
+    margin: 0 auto;
 }
 
-.movie__container{
+.movie__container {
     display: flex;
     margin: 10px;
     width: 20%;
     height: 33rem;
 }
 
-.movie__box{
+.movie__box {
     cursor: pointer;
     justify-content: center;
     width: 100%;
+    margin: 3rem 0;
 }
 
-.movies__img{
+.movies__img {
     border-radius: 10px;
     height: 87%;
     width: 100%;
 }
 
-.movie__details{
+.movies__img:hover {
+    -webkit-box-shadow: -2px 3px 28px 0px rgba(255, 230, 0, 0.3);
+    -moz-box-shadow: -2px 3px 28px 0px rgba(255, 230, 0, 0.3);
+    box-shadow: -2px 3px 28px 0px rgba(255, 230, 0, 0.3);
+}
+
+.movie__details {
     display: flex;
     flex-wrap: wrap;
 }
 
-.details__name{
+.details__name {
     color: white;
     font-family: var(--basic-font);
     width: 100%;
-
+    font-weight: 700;
+    margin: 0.45rem 0;
 }
-.details__year{
+
+.details__year {
     color: yellow;
     font-family: var(--basic-font);
     width: 100%;
+    margin: 0.45rem 0;
 }
 
-.details__likes{
+.details__likes {
     color: yellow;
     font-family: var(--basic-font);
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-.pages__box{
+.details__likes img {
+    height: 3vh;
+    display: block;
+    margin-right: 0.5rem;
+}
+
+.pages__box {
     display: flex;
     justify-content: space-around;
     margin: 2rem 0 0 0;
     padding: 0 40% 0 40%;
     width: 20%;
+
+    /* aguardando nova feature para pages__box */
+    display: none;
 }
 
-.page__button{
+.page__button {
     cursor: pointer;
     color: yellow;
     font-family: var(--basic-font);
 }
 
-.page__button:hover{
+.page__button:hover {
     opacity: 20%;
 }
-
-
-
-
