@@ -1,11 +1,9 @@
-//This function removel all childNodes of some element
 export function removeAllChildNodes (parent){
     while (parent.firstChild){
         parent.removeChild(parent.firstChild)
     }
 }
 
-//This function makes a request to the TMDB API
 export function request (page = 1){
     return fetch(`https://api.themoviedb.org/3/discover/movie?api_key=103186a9f4ef77e1f666cdd93a1fa70a&page=${page}&sort_by=popularity.desc`, {
         method: 'GET',
@@ -16,7 +14,6 @@ export function request (page = 1){
     
 }
 
-///This const execute an arrow function that returns the component which is inserted in movieBanner element
 export const component = (id, src, year, name, likes) =>{
     const content = ` 
     <div class="movie__box" data-id="${id}">
@@ -34,9 +31,7 @@ export const component = (id, src, year, name, likes) =>{
   return element
 }
 
-//This function inserts the folders inside the movieBanner element
 export function mountMovieFolders(apiResponse, movieBanner){
-    //this looping works as many times as results we have in apiResponse
     for(let a = 0; a < apiResponse.results.length; a++){
         const element = component(
             apiResponse.results[a].id,
@@ -48,7 +43,7 @@ export function mountMovieFolders(apiResponse, movieBanner){
         movieBanner.appendChild(element)
     }
 }
-//This function organizes the moveButtons used to move between the pages of the API.
+
 export function organizeMoveButtons(direction, goButton){
     const firstButton = document.querySelector('[data-button="1"]')
     const secondButton = document.querySelector('[data-button="2"]')
