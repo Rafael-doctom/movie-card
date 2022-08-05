@@ -1,28 +1,28 @@
-.hero-image{
+.hero-image {
     height: 100vh;
     background-color: gray;
     background-size: cover;
-    opacity : 100%; 
+    opacity: 100%;
     margin: 0;
     position: relative;
     background-image: url('../banner.svg');
 }
 
-.hero-text{
+.hero-text {
     margin: 17rem 10rem;
     position: absolute;
     display: flex;
     flex-direction: column;
 }
 
-.hero-text .title{
+.hero-text .title {
     font-weight: 700;
     font-size: 22px;
     color: #FFE600;
     margin: 0.55rem 0;
 }
 
-.hero-text .paragraph{
+.hero-text .paragraph {
     font-weight: 700;
     font-size: 60px;
     color: #FFFFFF;
@@ -32,7 +32,7 @@
     align-items: center;
 }
 
-.hero-text .details{
+.hero-text .details {
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -41,30 +41,30 @@
     align-items: center;
 }
 
-.hero-text .details span:nth-child(1){
+.hero-text .details span:nth-child(1) {
     margin-right: 1rem;
 }
 
-.hero-text .details span:nth-child(2){
+.hero-text .details span:nth-child(2) {
     display: flex;
     align-items: center;
     margin-right: 0.55rem;
 }
 
-.hero-text .details span:nth-child(2) img{
+.hero-text .details span:nth-child(2) img {
     margin: 0 .4rem;
 }
 
-.hero-text .details span:nth-child(3){
+.hero-text .details span:nth-child(3) {
     display: flex;
     align-items: center;
 }
 
-.hero-text .details span:nth-child(3) img{
+.hero-text .details span:nth-child(3) img {
     margin: 0 .4rem;
 }
 
-.hero-text button{
+.hero-text button {
     width: 130px;
     height: 32px;
     border: 1px solid #FFE600;
@@ -77,16 +77,22 @@
     cursor: pointer;
 }
 
-.hero-text button:hover{
+.hero-text button:hover {
     background-color: #FFE600;
     color: black;
 }
 
+/* aqui cmea o footer */
 footer {
     width: 100%;
-    background-color: #2e2d2d;    
+    background-color: #2e2d2d;
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+.footer-content {
+    width: 76vw;
+    margin: 0 auto;
 }
 
 footer .footer-cima {
@@ -101,7 +107,7 @@ footer .footer-links {
     list-style: none;
 }
 
-footer .footer-logo  {
+footer .footer-logo {
     display: flex;
     margin-bottom: 10px;
 }
@@ -121,9 +127,11 @@ footer .footer-link a:hover {
 .footer-links-baixo {
     display: flex;
     justify-content: space-between;
-    list-style: none;  
+    list-style: none;
     font-weight: 600;
-    margin: 0.55rem 0;
+    width: 76vw;
+    margin: 0.55rem auto;
+
 }
 
 .footer-links-baixo a {
@@ -134,13 +142,12 @@ footer .footer-link a:hover {
 }
 
 .footer-links-baixo a:hover {
-    color: #FFE600; 
+    color: #FFE600;
 }
 
-.footer-copyright p{
+.footer-copyright p {
     color: #fff;
-    /* margin-left: 60px; */
     font-size: small;
-    margin:1rem 0;
-
+    margin: 1rem 0;
+    width: 75vw;
 }
