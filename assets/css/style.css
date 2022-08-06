@@ -1,3 +1,61 @@
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 1rem 0;
+    align-items: center;
+}
+
+header img{
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+}
+
+nav{
+    display: flex;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a{
+    color: white;
+    margin: 0 1rem;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+nav ul li a:hover{
+    color: #FFE600;
+}
+
+nav ul li .item{
+    color: #FFE600;
+}
+
+nav button{
+    border: 1px solid #FFE600;
+    background: transparent;
+    height: 4.5vh;
+    width: 10vw;
+    border-radius: 15px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor:pointer;
+    transition: 0.5s;
+}
+
+nav button:hover{
+   background-color: #FFE600;
+   color: black;
+}
+
 .hero-image {
     height: 100vh;
     background-color: gray;
