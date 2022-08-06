@@ -9,8 +9,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-ol, ul {
+ol, ul, a {
 	list-style: none;
+    text-decoration: none;
+    text-transform: none;
 }
 
 blockquote, q {
