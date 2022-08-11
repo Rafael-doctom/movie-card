@@ -1,3 +1,5 @@
+const API_URL = '103186a9f4ef77e1f666cdd93a1fa70a';
+
 export function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild)
@@ -5,21 +7,21 @@ export function removeAllChildNodes(parent) {
 }
 
 export function request(page = 1) {
-    return fetch(`https://api.themoviedb.org/3/discover/movie?api_key=103186a9f4ef77e1f666cdd93a1fa70a&page=${page}&sort_by=popularity.desc`, {
+    return fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_URL}&with_genres=28,12,35&${page}&sort_by=popularity.desc`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
         }
     })
+};
 
-}
 
 export const component = (id, src, year, name, likes) => {
     const content = ` 
     <div class="movie__box" data-id="${id}">
-    <img src="${src}" alt="" class="movies__img" 
+    <img src="${src}" alt="" class="movies__img" id="movie__box_image"
     <div class="movie__details">
-        <p class="details__name">${name}</p>
+        <p class="details__name" id="details__name">${name}</p>
         <p class="details__year">Ano de lançamento: ${year}</p>
         <p class="details__likes"> 
         <img src="assets/icons/thumbs-up.svg" alt="liked icon"/> ${likes}

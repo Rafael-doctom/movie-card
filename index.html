@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Movie</title>
+  <title>Movie_card</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/reset.css">
@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/movie-component.css">
   <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 
 <body class="body">
@@ -27,13 +26,10 @@
         <li><a href="#">ANIMES</a></li>
         <li><a href="#">BLOG</a></li>
         <li><a href="#">CONTATO</a></li>
-
       </ul>
       <button>Login</button>
     </nav>
   </header>
-
-
 
   <div class="hero-image" id="hero-image">
     <div class="hero-text">
@@ -65,14 +61,13 @@
   <main class="container">
     <section class="genre">
       <div class="genre__box">
-        <button class="genre__button">Drama</button>
+        <button class="genre__button" id="genre_dram">Ação</button>
         <button class="genre__button">Romance</button>
         <button class="genre__button">Comédia</button>
       </div>
     </section>
     <h3 class="container__populars">Mais populares</h3>
-    <section class="movies" data-movies>
-    </section>
+    <section class="movies" id="movie__box2" data-movies></section>
     <div class="pages__box" data-page="">
       <span class="page__button" data-button="left">
         <<< /span>
@@ -83,8 +78,6 @@
           <span class="page__button" data-button="right">>></span>
     </div>
   </main>
-  <script src="assets/js/index.js" type="module"></script>
-  <script src="assets/js/app.js"></script>
 
   <footer>
     <div class="footer-content">
@@ -131,7 +124,8 @@
     </div>
   </footer>
 
-
+  <script src="assets/js/index.js" type="module"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 
 </html>
