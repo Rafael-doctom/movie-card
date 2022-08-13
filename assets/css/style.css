@@ -80,6 +80,10 @@ nav button:hover{
     margin: 0.55rem 0;
 }
 
+.hero-text .title span {
+    color: #fff;
+}
+
 .hero-text .paragraph {
     font-weight: 700;
     font-size: 60px;
@@ -208,4 +212,18 @@ footer .footer-link a:hover {
     font-size: small;
     margin: 1rem 0;
     width: 75vw;
+}
+
+/*Fernando code page 2*/
+.page-2-buttons a {
+    width: 130px;
+    height: 32px;
+    margin: 0.55rem 0;
+    font-size: 22px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.page-2-buttons a span {
+    color: #FFE600;
 }

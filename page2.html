@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="assets/css/variables.css">
   <link rel="stylesheet" href="assets/css/movie-component.css">
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="import" href="page2.html">
+  <link rel="import" href="index.html">
 </head>
 
 <body class="body">
@@ -34,7 +34,7 @@
 
   <div class="hero-image" id="hero-image">
     <div class="hero-text">
-      <h1 class="title">MovieCard</h1>
+      <h1 class="title"> <span>Seus</span> Filmes</h1>
       <p class="paragraph" id="paragraph"> Unlimited Movie, TVs Shows, & More.</p>
       <div class="details">
         <span id="genres">
@@ -53,9 +53,10 @@
           </span>
         </span>
       </div>
-      <button>
-        ASSISTA AGORA
-      </button>
+      <div class="page-2-buttons">        
+          <a href="index.html"><span>Início</span></a>
+          <a href="#">| Filmes</a>        
+      </div> 
     </div>
   </div>
 
@@ -63,11 +64,13 @@
     <section class="genre">
       <div class="genre__box">
         <button class="genre__button" id="genre_dram">Ação</button>
+        <button class="genre__button">Drama</button>
         <button class="genre__button">Romance</button>
         <button class="genre__button">Comédia</button>
+        
       </div>
     </section>
-    <h3 class="container__populars">Mais populares</h3>
+    <h3 class="container__populars">Novos filmes</h3>
     <section class="movies" id="movie__box2" data-movies></section>
     <div class="pages__box" data-page="">
       <span class="page__button" data-button="left">
