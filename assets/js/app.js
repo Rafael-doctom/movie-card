@@ -1,4 +1,3 @@
-
 const min = 555;
 const max = 700;
 const random = Math.floor(max * Math.random() + min * 2 + max);
@@ -33,4 +32,32 @@ const getBannerMovie = () => {
 };
 
 getBannerMovie();
+
+
+//Codigo fernando
+const getDataMovie = () => {
+
+    const paragraph = document.getElementById("paragraph");
+    const genres = document.getElementById("genres");
+    const release_date = document.getElementById("release_date");
+    const time = document.getElementById("time");
+
+    fetch(config.example)
+        .then(response => (response.json()))
+        .then(json => {
+            paragraph.innerText = json.original_title
+            genres.innerText = `${json.genres[0].name} ${json.genres[2].name}`
+            release_date.innerText = json.release_date
+            time.innerText = `${json.runtime} minutos`
+        })
+        .catch(() => console.log('Que pena! Não encontramos nenhum filme.'));
+};
+
+function getDataMovies() {
+
+}
+
+getDataMovies();
+
+
 
