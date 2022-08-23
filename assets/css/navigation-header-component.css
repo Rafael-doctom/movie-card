@@ -1,0 +1,14 @@
+@import "./variables.css";
+
+.classification--movies-active{
+    align-items: flex-start;
+    background-color: var(--grey-background);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+}
+
+.classification--movies-inactive{
+    display: none;
+}
