@@ -1,0 +1,22 @@
+html{
+    scroll-behavior: smooth;
+}
+.container__scroll{
+    background-color: transparent;
+    border: solid;
+    border-width: 1px;
+    border-color: yellow;
+    border-radius: 10px;
+    bottom: 5rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-family: var(--basic-font);
+    font-size: 1rem;
+    font-weight: 800;
+    height: 2em;
+    position: fixed;
+    right: 5rem;
+    width: 7em;
+    z-index: 99;
+}
