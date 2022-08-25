@@ -7,7 +7,7 @@ export function removeAllChildNodes(parent) {
 }
 
 export function request(page = 1) {
-    return fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_URL}&with_genres=28,12,35&${page}&sort_by=popularity.desc`, {
+    return fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_URL}&with_genres=28,12,35&page=${page}&sort_by=popularity.desc`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
@@ -45,6 +45,7 @@ export function mountMovieFolders(apiResponse, movieBanner) {
             apiResponse.results[a].vote_average
         )
         movieBanner.appendChild(element)
+
     }
 }
 
