@@ -1,0 +1,25 @@
+@import "./variables.css";
+
+.classification--movies-active{
+    align-items: flex-start;
+    background-color: var(--grey-background);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    opacity: 100%;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+
+
+.classification--movies-inactive{
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+ 
+}

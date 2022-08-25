@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="assets/css/movie-component.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="import" href="page2.html">
+  <link rel="stylesheet" href="assets/css/navigation-header-component.css">
+  <link rel="stylesheet" href="assets/css/scroll-button.css">
+
 </head>
 
 <body class="body">
@@ -22,7 +25,17 @@
     <nav>
       <ul>
         <li><a class="item" href="#">INÍCIO</a></li>
-        <li><a href="#">FILMES</a></li>
+        <li data-filmes>
+          <a href="#">FILMES</a>
+          <ul class="classification--movies-inactive" data-classificationMovies>
+            <li class="classification--movies__item"><a href="./page2.html">Novos Filmes</a></li>
+            <li class="classification--movies__item"><a href="index.html">Mais populares</a></li>
+            <li class="classification--movies__item"><a href="#">Opção a</a></li>
+            <li class="classification--movies__item"><a href="#">Opção a</a></li>
+            <li class="classification--movies__item"><a href="#">Opção a</a></li>
+            <li class="classification--movies__item"><a href="#">Opção a</a></li>
+          </ul>
+        </li>
         <li><a href="#">SÉRIES</a></li>
         <li><a href="#">ANIMES</a></li>
         <li><a href="#">BLOG</a></li>
@@ -78,6 +91,7 @@
           <span class="page__button" data-button="4">4</span>
           <span class="page__button" data-button="right">>></span>
     </div>
+    <button data-scroll class="container__scroll">Ir para o topo</button>
   </main>
 
   <footer>
@@ -127,6 +141,8 @@
 
   <script src="assets/js/index.js" type="module"></script>
   <script src="assets/js/app.js"></script>
+  <script src="assets/js/classification-movies.js" type="module"></script>
+  <script src="assets/js/scrollToTopButton.js" type="module"></script>
 </body>
 
 </html>
