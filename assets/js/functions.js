@@ -70,7 +70,7 @@ export function organizeMoveButtons(direction, goButton) {
     }
 }
 
-export function showDropDownClassificationMovieList(element){
+export function showDropDownClassificationMovieList(element) {
     element.classList.toggle("classification--movies-active")
     element.classList.toggle("classification--movies-inactive")
 }

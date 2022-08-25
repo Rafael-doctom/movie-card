@@ -31,8 +31,6 @@ const getBannerMovie = () => {
         .catch(() => console.log('Que pena! Não encontramos nenhum filme.'));
 };
 
-
-
 const getDataMovie = () => {
 
     const paragraph = document.getElementById("paragraph");
@@ -51,11 +49,7 @@ const getDataMovie = () => {
         .catch(() => console.log('Que pena! Não encontramos nenhum filme.'));
 };
 
-function getDataMovies() {
-
-}
-
-getDataMovies();
+getDataMovie();
 getBannerMovie();
 
 
