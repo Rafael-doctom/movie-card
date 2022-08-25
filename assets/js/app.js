@@ -31,10 +31,8 @@ const getBannerMovie = () => {
         .catch(() => console.log('Que pena! Não encontramos nenhum filme.'));
 };
 
-getBannerMovie();
 
 
-//Codigo fernando
 const getDataMovie = () => {
 
     const paragraph = document.getElementById("paragraph");
@@ -58,6 +56,7 @@ function getDataMovies() {
 }
 
 getDataMovies();
+getBannerMovie();
 
 
 

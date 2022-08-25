@@ -29,11 +29,10 @@ export function request2(page = 1) {
                             </p>
                         </div>
                     </div>
-
                 `
             })
 
-            document.getElementById("movie__box2").innerHTML = data_join.join("a");
+            document.getElementById("movie__box2").innerHTML = data_join.join("");
 
         })
         .catch(() => console.log('Que pena! Não encontramos nenhum filme.'));

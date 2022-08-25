@@ -1,17 +1,15 @@
-import {showDropDownClassificationMovieList } from './functions.js'
+import {showDropDownClassificationMovieList } from './functions.js';
 
-const filmes = document.querySelector('[data-filmes]')
-const classificationMovieBox = document.querySelector('[data-classificationMovies]')
-
+const filmes = document.querySelector('[data-filmes]');
+const classificationMovieBox = document.querySelector('[data-classificationMovies]');
 
 filmes.addEventListener('mouseover', () => {
-    showDropDownClassificationMovieList(classificationMovieBox)
-})
-
+    showDropDownClassificationMovieList(classificationMovieBox);
+});
 
 filmes.addEventListener('mouseout', () => {
-    showDropDownClassificationMovieList(classificationMovieBox)
-})
+    showDropDownClassificationMovieList(classificationMovieBox);
+});
 
 
 

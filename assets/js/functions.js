@@ -3,8 +3,8 @@ const API_URL = '103186a9f4ef77e1f666cdd93a1fa70a';
 export function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild)
-    }
-}
+    };
+};
 
 export function request(page = 1) {
     return fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${API_URL}&with_genres=28,12,35&${page}&sort_by=popularity.desc`, {
@@ -12,7 +12,7 @@ export function request(page = 1) {
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
         }
-    })
+    });
 };
 
 
