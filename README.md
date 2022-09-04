@@ -12,8 +12,6 @@
 
 Para contribuir com o Desenvolvimento do projeto, você pode acessar o design da aplicação que está disponibilizado no [Figma](https://www.figma.com/file/7UNpktjDBoMZT0SrWeHIQv/Movie-Site-Design-(Community)?node-id=2%3A2)
 
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTORS.md) e leia como contribuir.<br>
-
 
 ## ☕ Seja um dos contribuidores
 
