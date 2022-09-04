@@ -3,7 +3,7 @@
 </h1>
 
 
-> Este projeto consiste em exibir uma aplicação web que possui diversas funcionalidades, como: lista de filmes, filtragem de filmes, card de filmes, todos os dados são  oriundos de uma [API](https://www.themoviedb.org/?language=pt-BR).
+> Este projeto consiste em uma aplicação web que possui diversas funcionalidades, como: lista de filmes, séries, filtragem de filmes por gênero, card de filmes, todos os dados são  oriundos de uma [API](https://www.themoviedb.org/?language=pt-BR).
 > 
 
 ---
