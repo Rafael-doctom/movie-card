@@ -89,16 +89,15 @@
     justify-content: space-around;
     margin: 2rem 0 0 0;
     padding: 0 40% 0 40%;
-    width: 20%;
-
-    /* aguardando nova feature para pages__box */
-    display: none;
+    width: 100%;
+    display: flex;
 }
 
 .page__button {
     cursor: pointer;
     color: yellow;
     font-family: var(--basic-font);
+    margin: 0 .6rem;
 }
 
 .page__button:hover {
