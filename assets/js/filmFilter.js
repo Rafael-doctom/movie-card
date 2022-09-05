@@ -1,17 +1,7 @@
-import { removeAllChildNodes, request, mountMovieFolders, organizeMoveButtons } from "./functions.js";
-
 const API_URL = '103186a9f4ef77e1f666cdd93a1fa70a';
 const genre_dram = document.getElementById("genre_dram");
 const genre_romance = document.getElementById("genre_romance");
 const genre_comedy = document.getElementById("genre_comedy");
-
-
-(async () => {
-    const api = await request()
-    const apiResponse = await api.json()
-    const movieBanner = document.querySelector('[data-movies]')
-    mountMovieFolders(apiResponse, movieBanner,)
-})()
 
 export function request2(page = 1) {
 
@@ -26,7 +16,7 @@ export function request2(page = 1) {
                         <img src="${url_image}${item.poster_path}" alt="" class="movies__img" id="movie__box_image" />
                         <div class="movie__details">
                             <p class="details__name" id="details__name">${item.original_title}</p>
-                            <p class="details__year">Ano de lançamento: ${item.release_date.substring(0,4)}</p>
+                            <p class="details__year">Ano de lançamento: ${item.release_date.substring(0, 4)}</p>
                             <p class="details__likes"> 
                             <img src="assets/icons/thumbs-up.svg" alt="liked icon"/> ${item.vote_average}
                             </p>
@@ -55,7 +45,7 @@ export function request3(page = 1) {
                         <img src="${url_image}${item.poster_path}" alt="" class="movies__img" id="movie__box_image" />
                         <div class="movie__details">
                             <p class="details__name" id="details__name">${item.original_title}</p>
-                            <p class="details__year">Ano de lançamento: ${item.release_date.substring(0,4)}</p>
+                            <p class="details__year">Ano de lançamento: ${item.release_date.substring(0, 4)}</p>
                             <p class="details__likes"> 
                             <img src="assets/icons/thumbs-up.svg" alt="liked icon"/> ${item.vote_average}
                             </p>
@@ -84,7 +74,7 @@ export function request4(page = 1) {
                         <img src="${url_image}${item.poster_path}" alt="" class="movies__img" id="movie__box_image" />
                         <div class="movie__details">
                             <p class="details__name" id="details__name">${item.original_title}</p>
-                            <p class="details__year">Ano de lançamento: ${item.release_date.substring(0,4)}</p>
+                            <p class="details__year">Ano de lançamento: ${item.release_date.substring(0, 4)}</p>
                             <p class="details__likes"> 
                             <img src="assets/icons/thumbs-up.svg" alt="liked icon"/> ${item.vote_average}
                             </p>
@@ -102,43 +92,3 @@ export function request4(page = 1) {
 genre_dram.addEventListener('click', request2)
 genre_romance.addEventListener('click', request3)
 genre_comedy.addEventListener('click', request4)
-
-const movePageButtons = document.querySelector('[data-page]')
-
-movePageButtons.addEventListener('click', event => {
-    let button = event.target
-    const movieBanner = document.querySelector('[data-movies]')
-
-    if (parseInt(button.innerHTML) > 0) {
-        (async () => {
-            const newApiRequest = await request(parseInt(button.innerHTML))
-            const newApiResponse = await newApiRequest.json()
-            removeAllChildNodes(movieBanner)
-            mountMovieFolders(newApiResponse, movieBanner)
-        })()
-    }
-
-    switch (button.dataset.button) {
-        case 'right':
-            (async () => {
-                const goButton = parseInt(document.querySelector('[data-button="4"]').innerHTML)
-                const newApiRequest = await request(goButton + 1)
-                const newApiResponse = await newApiRequest.json()
-                removeAllChildNodes(movieBanner)
-                mountMovieFolders(newApiResponse, movieBanner)
-                organizeMoveButtons(true, goButton)
-            })()
-            break
-        case 'left':
-            (async () => {
-                const backButton = parseInt(document.querySelector('[data-button="1"]').innerHTML)
-                if (backButton == 1) return
-                const newApiRequest = await request(backButton - 4)
-                const newApiResponse = await newApiRequest.json()
-                removeAllChildNodes(movieBanner)
-                mountMovieFolders(newApiResponse, movieBanner)
-                organizeMoveButtons(false, backButton)
-            })()
-    }
-})
-
