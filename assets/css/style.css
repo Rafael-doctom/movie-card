@@ -137,6 +137,7 @@ nav button:hover{
     font-size: 14px;
     color: #FFFFFF;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .hero-text button:hover {
