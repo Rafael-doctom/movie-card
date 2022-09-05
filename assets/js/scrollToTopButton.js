@@ -1,13 +1,13 @@
-const scrollButton = document.querySelector('[data-scroll]');
+const ScrollButton = document.querySelector('[data-scroll]');
 
-scrollButton.addEventListener('click', () => {
+ScrollButton.addEventListener('click', () => {
     document.documentElement.scrollTop = 0
 });
 
 window.onscroll = () => {
     if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000 ){
-        scrollButton.style.display = 'block'
+        ScrollButton.style.display = 'block'
     } else{
-        scrollButton.style.display = 'none'
+        ScrollButton.style.display = 'none'
     };
 };
